@@ -1,0 +1,46 @@
+{% load static %}
+
+<div id="identifierCard" class="container">
+    <div class="card mb-3 shadow-lg " >
+      <div class="row no-gutters m-4">
+        <div class="col-md-4 p-3">
+          <img src="{{ account.photo.url }}" class="card-img rounded-circle shadow-lg" alt="personal photo">
+        </div>
+        <div class="col-md-5 flex-fill d-flex justify-content-center align-items-center">
+          <div class="card-body ">
+            <h5 class="card-title animated text-shadow">Hello My Name is {{ account.fname }} {{ account.lname }}</h5>
+            <p class="card-text mb-0 globalTextFormat text-shadow">I am a {{ account.jopTitle }} From {{ account.Country }}</p>
+            <p class="card-text m-0 globalTextFormat text-shadow">Welcome To My Portfolio</p>
+            <ul id="centerResponsiveSocialMedia" class="col-md-5 justify-content-center align-items-center  list-unstyled d-flex flex-fill mt-5">
+      <li class="">
+          <a class="text-muted" href="{{ account.instagram }}" target="_blank">
+          <img  src="{% static 'assets/svg/3225191_app_instagram_logo_media_popular_icon.svg' %}" width="48px" height="48px">
+          </a>
+      </li>
+      <li class="ms-3">
+          <a class="text-muted " href="{{ account.facebook }}" target="_blank">
+          <img src="{% static 'assets/svg/3225194_app_facebook_logo_media_popular_icon.svg' %}" width="48px" height="48px">
+          </a>
+      </li>
+      <li class="ms-3">
+          <a class="text-muted" href="{{ account.linkedin }} " target="_blank">
+          <img src="{% static 'assets/svg/3225190_app_linkedin_logo_media_popular_icon.svg' %}" width="48px" height="48px">
+          </a>
+      </li>
+      <li class="ms-3">
+          <a class="text-muted" href="{{ account.github }}" target="_blank">
+          <img src="{% static 'assets/svg/4202098_github_code_developer_logo_icon.svg' %}" width="48px" height="48px">
+          </a>
+      </li>
+
+    </ul>
+
+          </div>
+            <br>
+
+        </div>
+
+
+      </div>
+    </div>
+</div>

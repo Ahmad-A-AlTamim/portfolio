@@ -1,0 +1,66 @@
+body{
+
+    background-color: #B8D1D5;
+    font-family: 'Arial', sans-serif;
+}
+.navbar {
+   -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+   margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+ .nav-item a {
+    color: #6381A5;
+    font-size: 20px;
+    font-weight: bold;
+}
+ .globalTextFormat{
+
+    color: #545460;
+    font-weight: bold;
+ }
+.btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:focus, .btn-outline-primary:visited{
+    background-color: #6381A5;
+    color: white;
+    border-color: #6381A5;
+}
+.btn-outline-primary{
+    color: #6381A5;
+    background-color: white;
+    border-color: #6381A5;
+    border-width: 2px;
+    --bs-btn-active-bg: #6381A5;
+    --bs-btn-active-border-color: #6381A5;
+}
+.btn {
+
+    border-radius: 13px;
+}
+.card{
+    border-radius: 50px;
+
+}
+.card-title{
+    font-size: 32px;
+    font-weight: bold;
+    color: #6381A5;
+}
+.card-text{
+    font-size: 26px;
+
+}
+.text-shadow{
+    text-shadow: 2px 2px 20px #6c6c6c;
+}
+.hr-style{
+    border: 0;
+    height: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 100;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+}
