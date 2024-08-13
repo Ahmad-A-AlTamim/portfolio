@@ -1,0 +1,88 @@
+{% load static %}
+
+<div id="skillsCard" class="container">
+    <div class="card mb-3 shadow-lg " >
+      <div class="row no-gutters m-4">
+
+        <div class="col-md-8 flex-fill d-flex justify-content-center align-items-center">
+          <div class="card-body globalTextFormat text-shadow">
+            <h5 class="card-title  ">Skills</h5>
+              <br>
+            <div id="skillsList">
+                <ul>
+
+                        <div class="softSkills mt-4">
+                                <li>{{ softSkills.0.category }} :</li>
+                                {% for skill in softSkills %}
+
+                                    {% if forloop.counter == softSkills|length  %}
+                                        <p style="display: inline">{{ skill }}</p>
+                                    {% else %}
+                                        <p style="display: inline"> {{ skill }},</p>
+                                    {% endif %}
+                                {% endfor %}
+
+                        </div>
+                        <div class="ideSkills mt-4">
+                                <li>{{ ideSkills.0.category }} :</li>
+                                {% for skill in ideSkills %}
+
+                                    {% if forloop.counter == ideSkills|length  %}
+                                        <p style="display: inline">{{ skill }}</p>
+                                    {% else %}
+                                        <p style="display: inline"> {{ skill }},</p>
+                                    {% endif %}
+                                {% endfor %}
+
+                        </div>
+                        <div class="osSkills mt-4">
+                                <li>{{ osSkills.0.category }} :</li>
+                                {% for skill in osSkills %}
+
+                                    {% if forloop.counter == osSkills|length  %}
+                                        <p style="display: inline">{{ skill }}</p>
+                                    {% else %}
+                                        <p style="display: inline"> {{ skill }},</p>
+                                    {% endif %}
+                                {% endfor %}
+
+                        </div>
+                        <div class="editorSkills mt-4">
+                                <li>{{ editorSkills.0.category }} :</li>
+                                {% for skill in editorSkills %}
+
+                                    {% if forloop.counter == editorSkills|length  %}
+                                        <p style="display: inline">{{ skill }}</p>
+                                    {% else %}
+                                        <p style="display: inline"> {{ skill }},</p>
+                                    {% endif %}
+                                {% endfor %}
+
+                        </div>
+                        <div class="designSkills mt-4">
+                                <li>{{ designSkills.0.category }} :</li>
+                                {% for skill in designSkills %}
+
+                                    {% if forloop.counter == designSkills|length  %}
+                                        <p style="display: inline">{{ skill }}</p>
+                                    {% else %}
+                                        <p style="display: inline"> {{ skill }},</p>
+                                    {% endif %}
+                                {% endfor %}
+
+                        </div>
+
+
+                </ul>
+
+            </div>
+
+          </div>
+            <br>
+
+        </div>
+
+
+      </div>
+    </div>
+</div>
