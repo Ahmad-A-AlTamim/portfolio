@@ -30,3 +30,4 @@ def competation_processor(request):
     var=account.objects.get(id=1)
     competationList = var.competations_set.all().order_by('-date')
     return {"competationList":competationList}
+

@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.core.validators import FileExtensionValidator
 
 # Create your models here.
 class account(models.Model):
@@ -18,6 +19,7 @@ class account(models.Model):
     linkedin = models.URLField()
     github = models.URLField()
     about = RichTextField(verbose_name='About me')
+    pdfCV = models.FileField(upload_to='pdf/%Y/%m/%d/%H/%M/%S/',verbose_name='PDF CV',validators=[FileExtensionValidator(allowed_extensions=["pdf"])])
     logo = models.ImageField(upload_to='images/logo/%Y/%m/%d/%H/%M/%S/',verbose_name='Logo')
     cardBackground = models.ImageField(upload_to='images/logo/%Y/%m/%d/%H/%M/%S/',verbose_name='Card Background',default='static/assets/defaultBackGround/defaultBackGround.jpg')
     def __str__(self):

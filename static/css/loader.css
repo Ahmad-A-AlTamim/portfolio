@@ -13,12 +13,13 @@ body {
   height:100%;
 }
 .loader-wrapper {
+  z-index: 9999;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: #242f3f;
+  background-color: #6381A5;
   display:flex;
   justify-content: center;
   align-items: center;
