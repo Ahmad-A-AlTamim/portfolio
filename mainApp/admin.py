@@ -1,23 +1,35 @@
 from django.contrib import admin
-from .models import  account
-from .skillsModel import  skills
-from .educationModel import education
-admin.site.register(account)
-admin.site.register(education)
+from mainApp.models import  account
+from mainApp.skillsModel import  skills
+from mainApp.educationModel import education
+from mainApp.HonorsAndAwardsModel import honorsAndAwards
+from mainApp.imagesModel import imagesModel
 class skillsAdmin(admin.ModelAdmin):
     list_display = ['skill','category','user']
     list_filter = ['category','user']
     list_editable = ['category']
     search_fields = ['category','skill']
     list_per_page = 10
+pass
 
-# class educationAdmin(admin.ModelAdmin):
-#     list_display = ['major','university','startDate','endDate','user','note']
-#     list_filter = ['degree','user']
-#     list_editable = ['degree','major','university','startDate','endDate','note']
-#     search_fields = ['degree','major','university']
-#     list_per_page = 10
 
+class educationAdmin(admin.ModelAdmin):
+    list_display = ['degree','major', 'university', 'startDate', 'endDate', 'user', 'note']
+    list_filter = ['degree', 'user']
+    list_editable = [ 'major', 'university', 'startDate', 'endDate', 'note']
+    search_fields = ['degree', 'major', 'university']
+    list_per_page = 10
+
+class honorsAndAwardsAdmin(admin.ModelAdmin):
+    list_display = ['title','rank','date','user','description']
+    list_filter = ['date','user']
+    list_editable = ['rank','date','description']
+    search_fields = ['title','rank']
+    list_per_page = 10
+    pass
 # Register your models here.
+admin.site.register(account)
 admin.site.register(skills,skillsAdmin)
-# admin.site.register(education)
+admin.site.register(education,educationAdmin)
+admin.site.register(honorsAndAwards,honorsAndAwardsAdmin)
+admin.site.register(imagesModel)
