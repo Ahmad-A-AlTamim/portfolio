@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['192.168.88.50','127.0.0.1']
 INSTALLED_APPS = [
     'ckeditor',
     'mainApp.apps.MainappConfig',
+    'projects.apps.ProjectsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
