@@ -61,7 +61,9 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'portfolioProject2.context_processors.message_processor',
+                'portfolioProject2.context_processors.user_processor',
+                'portfolioProject2.context_processors.skills_processor',
+                'portfolioProject2.context_processors.education_processor',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',

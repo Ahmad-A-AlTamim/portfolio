@@ -3,6 +3,7 @@ from .models import  account
 from .skillsModel import  skills
 from .educationModel import education
 admin.site.register(account)
+admin.site.register(education)
 class skillsAdmin(admin.ModelAdmin):
     list_display = ['skill','category','user']
     list_filter = ['category','user']
@@ -19,4 +20,4 @@ class skillsAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(skills,skillsAdmin)
-admin.site.register(education)
+# admin.site.register(education)

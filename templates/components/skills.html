@@ -11,8 +11,8 @@
             <div id="skillsList">
                 <ul>
 
-                        <div class="softSkills mt-4">
-                                <li>{{ softSkills.0.category }} :</li>
+                        <div class="softSkills mt-0">
+                                <li class="subTitles">{{ softSkills.0.category }} :</li>
                                 {% for skill in softSkills %}
 
                                     {% if forloop.counter == softSkills|length  %}
@@ -24,7 +24,7 @@
 
                         </div>
                         <div class="ideSkills mt-4">
-                                <li>{{ ideSkills.0.category }} :</li>
+                                <li class="subTitles">{{ ideSkills.0.category }} :</li>
                                 {% for skill in ideSkills %}
 
                                     {% if forloop.counter == ideSkills|length  %}
@@ -36,7 +36,7 @@
 
                         </div>
                         <div class="osSkills mt-4">
-                                <li>{{ osSkills.0.category }} :</li>
+                                <li class="subTitles">{{ osSkills.0.category }} :</li>
                                 {% for skill in osSkills %}
 
                                     {% if forloop.counter == osSkills|length  %}
@@ -48,7 +48,7 @@
 
                         </div>
                         <div class="editorSkills mt-4">
-                                <li>{{ editorSkills.0.category }} :</li>
+                                <li class="subTitles">{{ editorSkills.0.category }} :</li>
                                 {% for skill in editorSkills %}
 
                                     {% if forloop.counter == editorSkills|length  %}
@@ -60,7 +60,7 @@
 
                         </div>
                         <div class="designSkills mt-4">
-                                <li>{{ designSkills.0.category }} :</li>
+                                <li class="subTitles">{{ designSkills.0.category }} :</li>
                                 {% for skill in designSkills %}
 
                                     {% if forloop.counter == designSkills|length  %}
