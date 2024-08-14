@@ -69,3 +69,26 @@ body{
     font-weight: bold;
     color: #6381A5;
 }
+.captionFormat{
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 20px;
+    text-shadow: #000000 2px 2px 5px;
+}
+.carousel-caption {
+    top: 0;
+    bottom: auto;
+}
+@media (max-width: 768px) {
+    .imgResponsive {
+        width: auto;
+        height: 350px;
+    }
+}
+@media (min-width: 769px) {
+    .imgResponsive {
+        width: auto;
+        height: 600px;
+    }
+}

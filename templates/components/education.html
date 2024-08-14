@@ -6,26 +6,18 @@
         <div class="col-md-8 flex-fill d-flex justify-content-center align-items-center">
           <div class="card-body globalTextFormat text-shadow">
             <h5 class="card-title  ">Education</h5>
-              <br>
              <ul>
 
-
-                <div class="education mt-0">
-                <li class="mb-2 subTitles">Bachelor Degree in Computer science </li>
-                <p class="mb-1">From : An Najah National University </p>
-                    <p class="mb-1">Start Date : Sept. 1, 2021 </p>
-                    <p class="mb-1"> End Date :  March 1, 2025 </p>
-                    <p>GPA:3.61/4</p>
+                {% for i in educationList %}
+                 <div class="education mt-4">
+                <li class="mb-2 subTitles">{{ i.degree }} Degree in {{ i.major }} </li>
+                <p class="mb-1">From : {{ i.university }} </p>
+                    <p class="mb-1">Start Date : {{ i.startDate }} </p>
+                    <p class="mb-1"> End Date : {{ i.endDate }} </p>
+                    <p>{{ i.note }}</p>
                 </div>
+                 {% endfor %}
 
-
-                <div class="education mt-4">
-                <li class="mb-2 subTitles">High School Degree in Science </li>
-                <p class="mb-1">From : Kafr Rai Secondary School for Boys </p>
-                    <p class="mb-1">Start Date : Sept. 1, 2020 </p>
-                    <p class="mb-1"> End Date :  Aug. 31, 2021 </p>
-                    <p>Final Degree : 94.9</p>
-                </div>
 
             </ul>
 

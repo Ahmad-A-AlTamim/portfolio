@@ -5,14 +5,13 @@
 
         <div class="col-md-8 flex-fill d-flex justify-content-center align-items-center">
           <div class="card-body globalTextFormat text-shadow">
-            <h5 class="card-title  ">Honors And Awards</h5>
+            <h5 class="card-title  ">Competations</h5>
             <ul>
 
-              {% for i in honorsList %}
-                    <li class="subTitles mb-2 mt-4">{{ i.title }} : </li>
+              {% for i in competationList %}
+                    <li class="subTitles mb-2 mt-4">{{ i.name }} : </li>
                   <p class=" mb-1">Date : {{ i.date }}</p>
-                  <p class=" mb-1">Rank : {{ i.rank }}</p>
-                    <p class=" mb-1">{{ i.description }}</p>
+
               {% endfor %}
             </ul>
                 </div>
