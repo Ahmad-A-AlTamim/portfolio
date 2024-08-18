@@ -1,3 +1,5 @@
+{% load static %}
+
 <div class="container ">
   <div class="row  justify-content-center p-4">
     {% for i in projectList %}
@@ -7,7 +9,7 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title mb-2">{{ i.title }}</h4>
-                    <a href="{{ i.url }}" class="btn btn-primary mb-2">See Profile</a>
+                    <a href="/projects/{{ i.title }}" class="btn btn-primary mb-2">See Project</a>
                   </div>
 
         </div>

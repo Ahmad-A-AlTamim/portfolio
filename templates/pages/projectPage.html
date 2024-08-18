@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<!-- content -->
+  <div class="container" style="min-height:350px">
+    <div class="row gx-4">
+      <aside class="col-lg-6">
+        <div class="border rounded-4 mb-3 d-flex justify-content-center">
+            <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="{{ project.image.url }}" />
+        </div>
+
+        <!-- thumbs-wrap.// -->
+        <!-- gallery-wrap .end// -->
+      </aside>
+      <main class="col-lg-6">
+        <div class="ps-lg-3">
+          <h4 class="card-title">
+              {{ project.title }}
+          </h4>
+
+          <p class="ms-4 mt-2"> 
+              {{ project.description }}
+          </p>
+
+
+            <dt class="col-3">Technologies:</dt>
+          <div class="row">
+            {% for i in tech %}
+                <li class="col-8 ms-4">{{ i }}</li>
+            {% endfor %}
+
+          </div>
+
+          <a href="{{ project.url }}" class="btn btn-primary mt-5 ms-1  " target="_blank">See Project Code</a>
+        </div>
+
+      </main>
+    </div>
+    </div>
+{% endblock content %}
