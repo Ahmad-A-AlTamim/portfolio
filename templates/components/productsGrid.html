@@ -1,10 +1,19 @@
-<div class="container">
-  <div class="row">
-    <div class=" col-md-6 col-12 mt-3" >col</div>
-    <div class=" col-md-6 col-12 mt-3" >col</div>
-    <div class=" col-md-6 col-12 mt-3" >col</div>
-    <div class=" col-md-6 col-12 mt-3" >col</div>
+<div class="container ">
+  <div class="row  justify-content-center p-4">
+    {% for i in projectList %}
+        <div class=" col-md-5 col-12 mt-3 h-100 projectCard m-3 shadow-lg" >
+                <div class="projectImage mt-1 mb-2" >
+                  <img class="card-img-top " style="max-height: 450px" src="{{ i.image.url }}" alt="Card image">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title mb-2">{{ i.title }}</h4>
+                    <a href="{{ i.url }}" class="btn btn-primary mb-2">See Profile</a>
+                  </div>
 
+        </div>
+
+
+    {% endfor %}
   </div>
 
 </div>

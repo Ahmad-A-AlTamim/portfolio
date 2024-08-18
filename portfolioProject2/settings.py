@@ -68,6 +68,7 @@ TEMPLATES = [
                 'portfolioProject2.context_processors.honors_processor',
                 'portfolioProject2.context_processors.images_processor',
                 'portfolioProject2.context_processors.competation_processor',
+                'portfolioProject2.context_processors.project_processor',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',

@@ -31,3 +31,7 @@ def competation_processor(request):
     competationList = var.competations_set.all().order_by('-date')
     return {"competationList":competationList}
 
+def project_processor(request):
+    var=account.objects.get(id=1)
+    projectList = var.project_set.all()
+    return {"projectList":projectList}
