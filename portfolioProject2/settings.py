@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h!ltf9t%%oc&122h92(73s=32ndpzzp__!+)ru$r&me#1+pf7f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','*']
 
 
 # Application definition
@@ -85,8 +85,12 @@ WSGI_APPLICATION = 'portfolioProject2.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "postgres.qhavjwrtzumtpcjxkism",
+        "PASSWORD": "1ahmadabed.altamim",
+        "HOST": "aws-0-eu-central-1.pooler.supabase.com",
+        "PORT": "6543",
     }
 }
 
