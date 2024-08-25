@@ -11,6 +11,19 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
+import cloudinary
+import cloudinary_storage
+import cloudinary.uploader
+import cloudinary.api
+
+
+cloudinary.config(
+    cloud_name = "dknbdgenx",
+    api_key = "773469969742765",
+    api_secret = "<your_api_secret>", # Click 'View API Keys' above to copy your API secret
+    secure=True
+)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +157,10 @@ MEDIA_URL = '//'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dknbdgenx',
+    'API_KEY': '773469969742765',
+    'API_SECRET': 'JIww4gzM2tuYi7MElT693eh7gVU',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
