@@ -15,7 +15,7 @@ def skills_processor(request):
     return {"softSkills":softSkills,"designSkills":designSkills,"osSkills":osSkills,"editorSkills":editorSkills,"ideSkills":ideSkills}
 def education_processor(request):
     var=account.objects.get(id=1)
-    educationList = var.education_set.all().order_by('-startDate')
+    educationList = var.education_set.all().order_by('-endDate')
     return {"educationList":educationList}
 def honors_processor(request):
     var=account.objects.get(id=1)

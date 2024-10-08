@@ -8,6 +8,7 @@ class education(models.Model):
         ('Bachelor','Bachelor'),
         ('Master','Master'),
         ('Doctorate','Doctorate'),
+        ('NanoDegree','NanoDegree'),
     ]
     degree = models.CharField(max_length=50,choices=degreeList,default='Bachelor')
     major = models.CharField(max_length=50)
